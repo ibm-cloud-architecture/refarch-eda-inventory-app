@@ -1,0 +1,12 @@
+INSERT INTO store(id, name, city, state,zipcode) VALUES (hibernate_sequence.NEXTVAL, 'Store_1','Santa Clara','CA','95051');
+INSERT INTO store(id, name, city, state,zipcode) VALUES (hibernate_sequence.NEXTVAL,'Store_2','Ithaca','NY','14850');
+INSERT INTO store(id, name, city, state,zipcode) VALUES (hibernate_sequence.NEXTVAL,'Store_3','San Diego','CA','91932');
+INSERT INTO store(id, name, city, state,zipcode) VALUES (hibernate_sequence.NEXTVAL,'Store_4','Los Angeles','CA','90001');
+INSERT INTO store(id, name, city, state,zipcode) VALUES (hibernate_sequence.NEXTVAL,'Store_5','San Francisco','CA','94016');
+INSERT INTO item(id,sku,title,price) VALUES(hibernate_sequence.NEXTVAL,'Item_3','Gloomhaven',140);
+INSERT INTO item(id,sku,title,price) VALUES(hibernate_sequence.NEXTVAL,'Item_4','Pandemic Legacy: Season 1',72);
+INSERT INTO item(id,sku,title,price) VALUES(hibernate_sequence.NEXTVAL,'Item_5','Terraforming Mars',42);
+INSERT INTO item(id,sku,title,price) VALUES(hibernate_sequence.NEXTVAL,'Item_6','Brass: Birmingham',155);
+INSERT INTO item(id,sku,title,price) VALUES(hibernate_sequence.NEXTVAL,'Item_7','Gaia Project',80);
+INSERT INTO item(id,sku,title,price) VALUES(hibernate_sequence.NEXTVAL,'Item_1','Arkham Horror: The Card Game',32);
+INSERT INTO item(id,sku,title,price) VALUES(hibernate_sequence.NEXTVAL,'Item_2','Viticulture Essential Edition',46);

@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+    db2:
+        container_name: db2
+        environment:
+            LICENSE: accept
+            DB2INST1_PASSWORD: ${DB2INST1_PASSWORD:-db2inst1}
+        image: ibmcom/db2:11.5.0.0a
+        ports:
+            - 50000:50000
+        privileged: true
+        volumes:
+            - ./db2data:/database
+            
