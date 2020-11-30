@@ -50,7 +50,7 @@ public class InventoryResource {
     @GET
     @Path("store/{storename}")
     public List<Inventory> getInventoryByStoreName(@PathParam String storename) {
-        List<Inventory> entities = Inventory.find("storename", Sort.by("ITEMCODE"), storename).list();
+        List<Inventory> entities = Inventory.find("storename", Sort.by("SKU"), storename).list();
         if (entities == null) {
             throw new WebApplicationException("Inventory with storename of " + storename + " does not exist.", 404);
         }
@@ -76,7 +76,7 @@ public class InventoryResource {
         if (inventory.storeName == null) {
             throw new WebApplicationException("Inventory storeId was not set on request.", 422);
         }
-        if (inventory.itemCode == null) {
+        if (inventory.sku == null) {
             throw new WebApplicationException("Inventory itemId was not set on request.", 422);
         }
 
@@ -87,7 +87,7 @@ public class InventoryResource {
         }
 
         entity.storeName = inventory.storeName;
-        entity.itemCode = inventory.itemCode;
+        entity.sku = inventory.sku;
         entity.quantity = inventory.quantity;
         entity.timestamp = simpleDateFormat.format(new Date());
         return entity;

@@ -8,7 +8,10 @@ This project uses [Quarkus](https://quarkus.io/), Hibernate with Panache and DB2
 
 The application is used to support different labs for DB2 and Kafka integration.
 
-Updated 11/04/2020: Quarkus 1.9.1 with new db2 datasource.
+Updated 11/04/2020: 
+
+* Quarkus 1.9.1 with new db2 datasource configurations. 
+* Align data model and data with the other project of store sale simulator
 
 The code is a based on [the SIMPLIFIED HIBERNATE ORM WITH PANACHE guide](https://quarkus.io/guides/hibernate-orm-panache).
 
@@ -41,7 +44,13 @@ Using the OpenApi definition at the following URL: [http://localhost:8080/swagge
 
 ## Packaging and running the application
 
-The application can be packaged using `./mvnw package`.
+The application can be packaged using:
+
+```shell
+source .env
+./mvnw package
+```
+
 It produces the `inventory-app-1.0.0-SNAPSHOT-runner.jar` file in the `/target` directory.
 Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/lib` directory.
 
